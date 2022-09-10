@@ -3,12 +3,10 @@ using namespace std;
 
 int main()
 {
-    int a[2];
+    int a;
     cout << "Enter your age: ";
-    {
-        for (int i = 0; i <= 1, i++)
-            cin >> a;
-    }
+    cin >> a;
+    
     cout << "The age entered is " << a;
 
     return 0;
