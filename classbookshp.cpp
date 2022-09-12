@@ -21,13 +21,13 @@ public:
     void assign()
     {
         cout << "Enter author's name: ";
-        cin >> author;
+        getline(cin, author);
         cout << "Enter title: ";
-        cin >> title;
+        getline(cin, title);
         cout << "Enter price: ";
         cin >> price;
         cout << "Enter publisher: ";
-        cin >> publisher;
+        getline(cin, publisher);
     }
 
     void display()
