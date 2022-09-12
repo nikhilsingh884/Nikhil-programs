@@ -5,21 +5,20 @@ class Bank
 {
 
     string name;
-    int accountNum;
+    int accountNum, option1;
     float balance = 10000;
 
 public:
     void Account_details()
     {
         int option;
-        string a = "savings A/C", b = "Current A/C";
+        string a = "Savings A/C", b = "Current A/C";
 
-        cout << "Enter account no.: " << endl;
+        cout << "Enter account no.: ";
         cin >> accountNum;
-
-        cout << "Select type of account: " << endl;
         cout << "Type 1 for Savings" << endl;
         cout << "Type 2 for Current" << endl;
+        cout << "Select the Type of Account: " << endl;
         cin >> option;
 
         switch (option)
@@ -39,20 +38,20 @@ public:
             cout << "Please enter a valid option..!!" << endl;
         }
 
-        cout << "Enter account holder's name: " << endl;
+        cout << "Enter account holder's name: ";
         cin >> name;
         cout << "Account balance: " << balance << endl;
     }
     void deposit()
     {
         float amount;
-
         cout << "Enter amount to deposit: " << endl;
         cin >> amount;
         balance = balance + amount;
-        cout << "Balance is: " << balance << endl;
-    }
+        cout << "Transaction successful..!! " << endl;
 
+        cout << "New balance is: " << balance << endl;
+    }
     void withdraw()
     {
         float amount;
@@ -60,21 +59,44 @@ public:
         cout << "Enter amount to withdraw: " << endl;
         cin >> amount;
         if (balance < amount)
-            cout << "Not sufficient balance in your account..!!" << endl
+        {
+            cout << "No sufficient balance in your account..!!" << endl
                  << endl;
+        }
         else
         {
             balance = balance - amount;
             cout << "Amount withdrawn successfully..!!" << endl
                  << endl;
-            cout << "Your Balance is: " << balance << endl;
+            cout << "Your new balance is: " << balance << endl;
+        }
+    }
+    void transaction()
+    {
+        cout << "Type 1 for Deposit" << endl;
+        cout << "Type 2 for Withdraw" << endl;
+        cout << "Select option: ";
+        cin >> option1;
+        switch (option1)
+        {
+
+        case 1:
+            deposit();
+            break;
+
+        case 2:
+            withdraw();
+            break;
+
+        default:
+            cout << "Please enter a valid option !!" << endl;
         }
     }
 };
 
 int main()
 {
-    Bank nikhil;
-    nikhil.Account_details();
-    nikhil.withdraw();
+    Bank Nikhil;
+    Nikhil.Account_details();
+    Nikhil.transaction();
 }
