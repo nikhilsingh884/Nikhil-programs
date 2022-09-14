@@ -18,7 +18,7 @@ public:
     }
     void getDataA()
     {
-        cout << "Roll number: " << endl;
+        cout << "Roll number: " << rollNum << endl;
     }
 };
 
@@ -35,10 +35,9 @@ public:
 
     void getDataB()
     {
-        cout << "English: " << endl;
-        cin >> eng;
-        cout << "Maths: " << endl;
-        cin >> maths;
+        cout << "English: " << eng << endl;
+
+        cout << "Maths: " << maths << endl;
     }
 };
 
@@ -47,20 +46,24 @@ class Result : public Test
     int totalMarks;
 
 public:
-    void setDataC(int y)
+    void setDataC(int z)
     {
-        totalMarks = y;
+        totalMarks = z;
     }
 
     void getDataC()
     {
-        cout << "Total marks: " << endl;
+        cout << "Total marks: " << totalMarks << endl;
     }
 };
 
 int main()
 {
     Result nikhil;
-    nikhil.setDataA(10);
+    nikhil.setDataA(5);
     nikhil.getDataA();
+    nikhil.setDataB(60, 70);
+    nikhil.getDataB();
+    nikhil.setDataC(130);
+    nikhil.getDataC();
 }
