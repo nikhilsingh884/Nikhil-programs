@@ -24,9 +24,9 @@ public:
 
 class Test : public Students
 {
-    int eng, maths;
 
 public:
+    int eng, maths;
     void setDataB(int y, int z)
     {
         eng = y;
@@ -46,9 +46,9 @@ class Result : public Test
     int totalMarks;
 
 public:
-    void setDataC(int z)
+    void setDataC()
     {
-        totalMarks = z;
+        totalMarks = eng + maths;
     }
 
     void getDataC()
@@ -62,8 +62,8 @@ int main()
     Result nikhil;
     nikhil.setDataA(5);
     nikhil.getDataA();
-    nikhil.setDataB(60, 70);
+    nikhil.setDataB(70, 70);
     nikhil.getDataB();
-    nikhil.setDataC(130);
+    nikhil.setDataC();
     nikhil.getDataC();
 }
