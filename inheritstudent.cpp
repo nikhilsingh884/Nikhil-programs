@@ -24,6 +24,10 @@ public:
         cout << "Enter age: " << endl;
         cin >> age;
     }
+    void displayPerson()
+    {
+        cout << "Person name: " << name << endl;
+    }
 };
 
 class Student
@@ -48,6 +52,12 @@ public:
         cout << "Enter salary: " << endl;
         cin >> salary;
     }
+    void display()
+    {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Salary: " << salary << endl;
+    }
 };
 
 int main()
@@ -55,6 +65,6 @@ int main()
     Teacher abc;
     abc.nameFunc();
     abc.ageFunc();
-    abc.percentFunc();
     abc.salaryFunc();
+    abc.display();
 }
